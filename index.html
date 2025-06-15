@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Garden</title>
+  <link rel="icon" href="image/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hamburger" onclick="toggleSidenav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="sidenav">
+    <ul id="nav-list" class="nav-list">
+      <li><a href="#home" onclick="showSection('home')">Trang chủ</a></li>
+      <li><a href="#temp-chart" onclick="showTemperatureChart()">Biểu đồ nhiệt độ</a></li>
+      <li><a href="#humidity-chart" onclick="showHumidityChart()">Biểu đồ độ ẩm</a></li>
+      <li><a href="#light-chart" onclick="showLightChart()">Biểu đồ cường độ ánh sáng</a></li>
+      <li><a href="#history" onclick="showHistory()">Lịch sử</a></li>
+    </ul>
+  </nav>
+
+  <header id="header">
+    <div class="container">
+      <div class="header-content">
+        <img src="image/spkt.png" alt="Logo" class="logo">
+        <span class="university-name">Trường Đại học Sư Phạm Kỹ Thuật TP. HCM</span>
+      </div>
+      <h1>Smart Garden</h1>
+    </div>
+  </header>
+
+  <section id="banner">
+    <div class="tag">
+      <button onclick="selectDistrict('Location1', this)">Vườn 1</button>
+      <button onclick="selectDistrict('Location2', this)">Vườn 2</button>
+      <button onclick="selectDistrict('Location3', this)">Vườn 3</button>
+      <button onclick="selectDistrict('Location4', this)">Vườn 4</button>
+    </div>
+  </section>
+
+  <main id="main">
+    <div id="home" class="section active">
+      <div id="top">
+        <div class="weather-container">
+          <div class="weather-box">
+            <img src="image/nhietke.png" alt="Nhiệt độ" class="weather-icon">
+            <h2>Nhiệt độ</h2>
+            <p id="nhietdo">-- °C</p>
+          </div>
+          <div class="weather-box">
+            <img src="image/humidity.png" alt="Độ ẩm" class="weather-icon">
+            <h2>Độ ẩm</h2>
+            <p id="doam">-- %</p>
+          </div>
+          <div class="weather-box">
+            <img src="image/light_intensive.png" alt="Cường độ ánh sáng" class="weather-icon">
+            <h2>Cường độ ánh sáng</h2>
+            <p id="luongmua">-- lux</p>
+          </div>
+        </div>
+      </div>
+      <div id="bot">
+        <div class="control-container">
+          <div class="control-box">
+            <img src="image/watering_can_off.png" alt="Watering" class="control-icon" id="imgWatering">
+            <div class="btn-group">
+              <button id="btnWateringOn">On</button>
+              <button id="btnWateringOff">Off</button>
+            </div>
+            <p>Watering</p>
+          </div>
+          <div class="control-box">
+            <img src="image/fan_off.png" alt="Fan" class="control-icon" id="imgFan">
+            <div class="btn-group">
+              <button id="btnFanOn">On</button>
+              <button id="btnFanOff">Off</button>
+            </div>
+            <p>Fan</p>
+          </div>
+          <div class="control-box">
+            <img src="image/shade_off.png" alt="Shade" class="control-icon" id="imgShade">
+            <div class="btn-group">
+              <button id="btnShadeOn">On</button>
+              <button id="btnShadeOff">Off</button>
+            </div>
+            <p>Shade</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="temp-chart" class="section">
+      <div class="chart-container">
+        <canvas id="temperatureChart"></canvas>
+        <p id="temp-error" style="display: none; color: red;">Không thể tải dữ liệu nhiệt độ</p>
+      </div>
+    </div>
+    <div id="humidity-chart" class="section">
+      <div class="chart-container">
+        <canvas id="humidityChart"></canvas>
+        <p id="humidity-error" style="display: none; color: red;">Không thể tải dữ liệu độ ẩm</p>
+      </div>
+    </div>
+    <div id="light-chart" class="section">
+      <div class="chart-container">
+        <canvas id="lightChart"></canvas>
+        <p id="light-error" style="display: none; color: red;">Không thể tải dữ liệu cường độ ánh sáng</p>
+      </div>
+    </div>
+    <div id="history-section" class="section">
+      <div class="history-header">
+        <h2>Lịch sử hoạt động thiết bị</h2>
+        <div class="history-filter">
+          <select id="district-filter" onchange="filterHistory()">
+            <option value="all">Tất cả các vườn</option>
+            <option value="Location1">Vườn 1</option>
+            <option value="Location2">Vườn 2</option>
+            <option value="Location3">Vườn 3</option>
+            <option value="Location4">Vườn 4</option>
+          </select>
+          <select id="device-filter" onchange="filterHistory()">
+            <option value="all">Tất cả thiết bị</option>
+            <option value="Watering">Watering</option>
+            <option value="Fan">Fan</option>
+            <option value="Shade">Shade</option>
+          </select>
+        </div>
+      </div>
+      <div id="history-list" class="history-list">
+        <!-- History items will be added here dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-content">
+      <div id="footer-time"></div>
+      <ul>
+        <li>Nguyễn_Tấn_Đạt</li>
+      </ul>
+      <div id="footer-date"></div>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
