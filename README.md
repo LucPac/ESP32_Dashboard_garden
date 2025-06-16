@@ -86,7 +86,12 @@ Hình ảnh Dashboard
 
 Hình ảnh App
 
-![Screenshot_2025 06 16_21 40 53 810](https://github.com/user-attachments/assets/4e3e2b38-30c4-4426-9b80-3b8a2767c010)
+<div align="center">![Screenshot_2025 06 16_21 40 53 810](https://github.com/user-attachments/assets/4e3e2b38-30c4-4426-9b80-3b8a2767c010)
+
+Hình ảnh mạch thực tế
+
+![image](https://github.com/user-attachments/assets/f16a79a2-6e48-48a7-94b4-9fe21af7fad4)
+
 
 Video Demo
 
