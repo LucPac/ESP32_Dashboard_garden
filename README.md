@@ -82,7 +82,7 @@ git clone https://github.com/LucPac/ESP32_Dashboard_garden.git
 
 PCB Layout
 
-![image](https://github.com/user-attachments/assets/9a16fc5d-102d-4ff1-85c1-d34613130ee4)
+![image](https://github.com/user-attachments/assets/b8716e92-04ed-49a3-8ffa-f9dbd9813bbb)
 
 Hình ảnh Dashboard
 
