@@ -70,9 +70,9 @@ git clone https://github.com/LucPac/ESP32_Dashboard_garden.git
 |-------------------|--------------------------------------------------------|
 | Nhiệt độ / Độ ẩm  | Đọc bằng cảm biến DHT11                                |
 | Ánh sáng          | Đọc bằng cảm biến quang trở / LDR                      |
-| Tưới cây          | Tự động bật khi độ ẩm dưới ngưỡng / Điều khiển từ app  |
-| Quạt thông gió    | Bật khi độ ẩm quá cao / Điều khiển thủ công            |
-| Mái che           | Đóng/mở khi ánh sáng quá gắt hoặc theo lệnh người dùng |
+| Tưới cây          | Điều khiển thủ công                                    |
+| Quạt thông gió    | Điều khiển thủ công                                    |
+| Mái che           | Đóng/mở theo lệnh người dùng                           |
 | Dashboard Web/App | Hiển thị dữ liệu và gửi lệnh điều khiển (qua Firebase) |
 ```
 
