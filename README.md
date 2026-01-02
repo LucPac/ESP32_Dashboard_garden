@@ -92,8 +92,6 @@ Dashboard Image
 
 App Image
 
-![Screenshot_2025 06 16_21 40 53 810](https://github.com/user-attachments/assets/4e3e2b38-30c4-4426-9b80-3b8a2767c010)
-
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4e3e2b38-30c4-4426-9b80-3b8a2767c010" alt="Screenshot_2025_06_16_21_40_53_810">
 </div>
