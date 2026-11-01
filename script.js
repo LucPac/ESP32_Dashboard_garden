@@ -1,6 +1,12 @@
 // Firebase configuration and initialization
 const firebaseConfig = {
-
+  apiKey: "AIzaSyBPbOR9prYJ-SQdTGc4bVTA546SMV9viHQ",
+  authDomain: "project-2b047.firebaseapp.com",
+  databaseURL: "https://project-2b047-default-rtdb.firebaseio.com",
+  projectId: "project-2b047",
+  storageBucket: "project-2b047.firebasestorage.app",
+  messagingSenderId: "967622012035",
+  appId: "1:967622012035:web:253d699691377867f17fb6"
 };
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
